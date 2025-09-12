@@ -19,18 +19,19 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
-/* Task 2: Directors Interface extending Teacher */
+/* Task 2: Directors Interface */
 interface Directors extends Teacher {
-  numberOfReports: number;
+  numberOfReports: number;   // mandatory attribute
 }
 
-// Example usage of Directors
+// Example usage
 const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
-  location: 'London',
   fullTimeEmployee: true,
+  location: 'London',
   numberOfReports: 17,
 };
 
 console.log(director1);
+
