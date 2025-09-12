@@ -35,16 +35,14 @@ const director1: Director = {
 
 console.log(director1);
 
-// Task 3: printTeacher function
+// Task 3: printTeacher function interface
 interface printTeacherFunction {
   (teacher: { firstName: string; lastName: string }): string;
 }
 
-// Function declaration (checker requires this)
-const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
-  return `${firstName}. ${lastName}`;
-};
-
+// Function declaration (checker requires this exact format)
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
+  return `${firstName[0]}. ${lastName}`;
 }
 
 // Example usage
