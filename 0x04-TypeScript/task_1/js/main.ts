@@ -62,12 +62,10 @@ interface StudentClassInterface {
   displayName(): string;
 }
 
-// Task 4: StudentClass
-class StudentClass implements StudentClassInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
-  // plain constructor (no destructuring)
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -84,5 +82,6 @@ class StudentClass implements StudentClassInterface {
 
 // Example usage
 const student = new StudentClass('John', 'Doe');
-console.log(student.displayName()); // John
-console.log(student.workOnHomework()); // Currently working
+console.log(student.displayName());
+console.log(student.workOnHomework());
+
