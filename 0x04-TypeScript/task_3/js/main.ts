@@ -1,4 +1,4 @@
-/// <reference path="crud.d.ts" />
+// <reference path="crud.d.ts" />
 
 import { RowID, RowElement } from './interface';
 import * as CRUD from './crud';
@@ -13,10 +13,7 @@ const row: RowElement = {
 const newRowID: RowID = CRUD.insertRow(row);
 
 // Update row with age field
-const updatedRow: RowElement = {
-  ...row,
-  age: 23,
-};
+const updatedRow: RowElement = { ...row, age: 23 };
 
 // Update and delete row
 CRUD.updateRow(newRowID, updatedRow);
