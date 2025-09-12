@@ -1,3 +1,4 @@
+/* Task 1: Teacher Interface */
 interface Teacher {
   readonly firstName: string;
   readonly lastName: string;
@@ -7,11 +8,23 @@ interface Teacher {
   [key: string]: any;
 }
 
+// Example usage of Teacher
+const teacher3: Teacher = {
+  firstName: 'John',
+  lastName: 'Doe',
+  fullTimeEmployee: false,
+  location: 'London',
+  contract: false,
+};
+
+console.log(teacher3);
+
+/* Task 2: Directors Interface extending Teacher */
 interface Directors extends Teacher {
   numberOfReports: number;
 }
 
-// Example usage
+// Example usage of Directors
 const director1: Directors = {
   firstName: 'John',
   lastName: 'Doe',
