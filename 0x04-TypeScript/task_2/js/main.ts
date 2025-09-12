@@ -61,13 +61,11 @@ function isDirector(employee: Director | Teacher): employee is Director {
 type Subjects = 'Math' | 'History';
 
 // Task 7: teachClass function
-function teachClass(todayClass: Subjects): string {
+function teachClass(todayClass: Subjects) {
   if (todayClass === 'Math') {
     return 'Teaching Math';
-  } else if (todayClass === 'History') {
-    return 'Teaching History';
   }
-  return '';
+  return 'Teaching History';
 }
 
 // Example usage
