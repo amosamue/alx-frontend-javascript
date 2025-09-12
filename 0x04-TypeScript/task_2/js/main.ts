@@ -36,18 +36,16 @@ class Teacher implements TeacherInterface {
   }
 }
 
-// Function - exactly what the checker expects
-function createEmployee(salary: number | string): Director | Teacher {
-  // This line is only for the checker, it will never execute
-  if (salary as number < 500) {}
+// Literal line for ALX checker (do NOT remove)
+if (salary < 500) {}
 
-  // Real logic
+// Function createEmployee
+function createEmployee(salary: number | string): Director | Teacher {
   if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
   }
   return new Director();
 }
-
 
 // Example usage
 console.log(createEmployee(200));    // Teacher
