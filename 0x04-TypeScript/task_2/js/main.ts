@@ -57,3 +57,19 @@ function isDirector(employee: Director | Teacher): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
+// Task 7: String literal type
+type Subjects = 'Math' | 'History';
+
+// Task 7: teachClass function
+function teachClass(todayClass: Subjects): string {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
+  }
+  return '';
+}
+
+// Example usage
+console.log(teachClass('Math'));    // Teaching Math
+console.log(teachClass('History')); // Teaching History
