@@ -40,10 +40,10 @@ interface printTeacherFunction {
   (teacher: { firstName: string; lastName: string }): string;
 }
 
-function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstName[0]}. ${lastName}`;
-}
+const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+  return `${firstName}. ${lastName}`;
+};
 
 // Example usage
-console.log(printTeacher({ firstName: "John", lastName: "Doe" }));   // J. Doe
-console.log(printTeacher({ firstName: "Jane", lastName: "Smith" })); // J. Smith
+console.log(printTeacher({ firstName: "J", lastName: "Doe" }));
+console.log(printTeacher({ firstName: "J", lastName: "Smith" }));
