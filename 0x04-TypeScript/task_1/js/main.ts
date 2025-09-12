@@ -41,8 +41,10 @@ interface printTeacherFunction {
 }
 
 // Function declaration (checker requires this)
-function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
-  return `${firstName[0]}. ${lastName}`;
+const printTeacher: printTeacherFunction = ({ firstName, lastName }) => {
+  return `${firstName}. ${lastName}`;
+};
+
 }
 
 // Example usage
